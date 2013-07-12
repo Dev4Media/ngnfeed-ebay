@@ -32,8 +32,6 @@ class Session
         $this->transport = new HttpClient();
         $this->credentials = $credentials;
         $this->serializer = $serializer;
-
-
     }
 
     public function setUrl($url)
@@ -41,6 +39,16 @@ class Session
         $this->url = $url;
     }
 
+    public function setMode($mode)
+    {
+        if($mode == "live") {
+            $this->url = self::URL_PRODUCTION;
+        }
+        else {
+            $this->url = self::URL_SANDBOX;
+        }
+    }
+    
     /**
      * @return bool
      */
