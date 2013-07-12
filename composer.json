@@ -16,20 +16,32 @@
 
         }
     ],
+
     "require":      {
-        "php":  ">=5.4.0"
+        "php":  ">=5.4.0",
+        "guzzle/guzzle":  "~3.7",
+        "symfony/serializer": "2.3.*"
     },
+
     "require-dev":  {
         "phpspec/phpspec": "2.0.*@dev"
     },
+
     "autoload":     {
-        "psr-0":    {   "D4m\\NgnFeed\\Ebay":   "src/"  }
+        "psr-0":    {   "D4m\\NgnFeed\\Ebay":   "src/D4m/NgnFeed/Ebay/"  }
     },
+
     "extra":    {
         "branch-alias": {
             "dev-master":   "1.0.x-dev"
         }
     },
-    "minimum-stability": "dev"
 
+    "config": {
+        "bin-dir": "bin"
+    },
+
+    "bin": ["bin/phpspec"],
+
+    "minimum-stability": "dev"
 }
