@@ -196,7 +196,7 @@ class Session
         $serializedRequest = $this->serializer->serialize($parameters['request'], $this->format);
         $requestBody = $this->addXmlns($serializedRequest, $apiCallName['X-EBAY-API-CALL-NAME']);
         $requestBody = $this->addEncoding($requestBody, 'utf-8');
-        echo $requestBody;
+        
         return  $requestBody;
 
     }

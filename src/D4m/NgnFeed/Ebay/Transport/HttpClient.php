@@ -43,10 +43,6 @@ class HttpClient
 
     public function send($url, $headers, $postBody)
     {
-        //echo implode('\\n', $postBody);
-        //var_dump($postBody);
-        //echo $postBody;
-        //exit;
         $request = $this->client->post($url, $headers, $postBody );
         return $request->send();
     }
