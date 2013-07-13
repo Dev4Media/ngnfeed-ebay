@@ -28,7 +28,7 @@
     },
 
     "autoload":     {
-        "psr-0":    {   "D4m\\NgnFeed\\Ebay":   "src/D4m/NgnFeed/Ebay/"  }
+        "psr-0":    {   "D4m\\NgnFeed\\Ebay":   "src/"  }
     },
 
     "extra":    {
