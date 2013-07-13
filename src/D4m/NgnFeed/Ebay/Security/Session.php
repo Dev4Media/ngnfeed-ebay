@@ -48,7 +48,7 @@ class Session
             $this->url = self::URL_SANDBOX;
         }
     }
-    
+
     /**
      * @return bool
      */
