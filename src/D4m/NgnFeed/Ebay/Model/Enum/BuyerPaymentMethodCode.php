@@ -1,12 +1,6 @@
 <?php
-/**
- * @author: Raul Rodriguez - raulrodriguez782@gmail.com
- * @created: 7/4/13 - 3:05 AM
- * 
- */
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
-
 
 class BuyerPaymentMethodCode
 {

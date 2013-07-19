@@ -1,12 +1,6 @@
 <?php
-/**
- * @author: Raul Rodriguez - raulrodriguez782@gmail.com
- * @created: 7/4/13 - 12:21 AM
- * 
- */
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
-
 
 class DetailLevelCode
 {
