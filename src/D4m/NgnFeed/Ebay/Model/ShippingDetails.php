@@ -674,6 +674,4 @@ class ShippingDetails extends Entity
     {
         return $this->thirdPartyCheckout;
     }
-
-
 }

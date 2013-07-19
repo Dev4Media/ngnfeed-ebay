@@ -333,7 +333,4 @@ class ReturnPolicy extends Entity
     {
         return $this->warrantyTypeOption;
     }
-
-
-
 }

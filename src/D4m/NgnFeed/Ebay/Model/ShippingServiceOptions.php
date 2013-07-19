@@ -231,6 +231,4 @@ class ShippingServiceOptions extends Entity
     {
         return $this->shippingTimeMin;
     }
-
-
 }
