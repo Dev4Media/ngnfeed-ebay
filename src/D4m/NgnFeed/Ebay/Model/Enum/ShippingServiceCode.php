@@ -51,4 +51,5 @@ class ShippingServiceCode
     const FREIGHT_SHIPPING = "FreightShipping";
     const FREIGHT_OTHER_SHIPPING = "FreightOtherShipping";
     const FREIGHT = "Freight";
+    const FREIGHT_SHIPPING_INTERNATIONAL = "FreightShippingInternational";
 }
