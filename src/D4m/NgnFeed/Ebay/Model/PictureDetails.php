@@ -180,6 +180,4 @@ class PictureDetails extends Entity
     {
         return $this->pictureURL;
     }
-
-
 }

@@ -1,12 +1,6 @@
 <?php
-/**
- * @author: Raul Rodriguez - raulrodriguez782@gmail.com
- * @created: 7/11/13 - 9:13 PM
- * 
- */
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
-
 
 class EndReasonCode
 {

@@ -2469,5 +2469,4 @@ class Item extends Entity
     {
         return $this->watchCount;
     }
-
 }

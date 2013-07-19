@@ -395,7 +395,4 @@ class Category extends Entity
     {
         return $this->virtual;
     }
-
-
-
 }

@@ -1,9 +1,4 @@
 <?php
-/**
- * @author: Raul Rodriguez - raulrodriguez782@gmail.com
- * @created: 7/2/13 - 5:50 PM
- * 
- */
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
