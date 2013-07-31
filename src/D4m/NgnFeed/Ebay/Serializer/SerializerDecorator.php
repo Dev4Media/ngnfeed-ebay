@@ -26,7 +26,7 @@ class SerializerDecorator
 
     private function cleanVirtualFieldsCollection($data)
     {
-        return preg_replace("/___[\d+]>/i", ">", $data);
+        return preg_replace("/___(\d+)>/i", ">", $data);
     }
 
 }
