@@ -8,7 +8,7 @@
 namespace D4m\NgnFeed\Ebay\Model;
 
 
-class InternationalShippingServiceOptions extends Entity
+class InternationalShippingServiceOption extends Entity
 {
     protected $shippingService;
     protected $shippingServiceCost;
