@@ -7,6 +7,9 @@
 
 namespace D4m\NgnFeed\Ebay\Security;
 
+use D4m\NgnFeed\Ebay\EbayEvents;
+use D4m\NgnFeed\Ebay\Event\RequestEvent;
+use D4m\NgnFeed\Ebay\Event\ResponseEvent;
 use D4m\NgnFeed\Ebay\Transport\HttpClient;
 
 class Session
@@ -25,12 +28,14 @@ class Session
     private $apiDetailLevel;
     private $siteId;
     private $format = "xml";
+    private $dispatcher;
 
-    public function __construct($credentials, $serializer = null) {
+    public function __construct($credentials, $dispatcher = null, $serializer = null) {
 
         $this->url = self::URL_SANDBOX;
         $this->transport = new HttpClient();
         $this->credentials = $credentials;
+        $this->dispatcher = $dispatcher;
         $this->serializer = $serializer;
     }
 
@@ -73,6 +78,16 @@ class Session
     public function setTransport($transport)
     {
         $this->transport = $transport;
+    }
+
+    /**
+     * Set Dispatcher
+     *
+     * @param $dispatcher
+     */
+    public function setDispatcher($dispatcher)
+    {
+        $this->dispatcher = $dispatcher;
     }
 
     /**
@@ -219,7 +234,29 @@ class Session
 
     protected function send($headers, $payload)
     {
-        return $this->transport->send($this->url, $headers, $payload);
+        $this->dispatchRequest($headers, $payload);
+        $response = $this->transport->send($this->url, $headers, $payload);
+        $this->dispatchResponse($response);
+
+        return $response;
+    }
+
+    protected function dispatchRequest($headers, $payload)
+    {
+        if(!is_null($this->dispatcher)) {
+            $data['headers'] = $headers;
+            $data['payload'] = $payload;
+            $event = new RequestEvent($data);
+            $this->dispatcher->dispatch(EbayEvents::REQUEST_SEND, $event);
+        }
+    }
+
+    protected function dispatchResponse($response)
+    {
+        if(!is_null($this->dispatcher)) {
+            $event = new ResponseEvent($response);
+            $this->dispatcher->dispatch(EbayEvents::RESPONSE_RECEIVE, $event);
+        }
     }
 
 }
