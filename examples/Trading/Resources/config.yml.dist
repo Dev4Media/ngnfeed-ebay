@@ -1,0 +1,5 @@
+parameters:
+  name:   %NAME%
+  appId:  %APPID%
+  devId:  %DEVID%
+  certId: %CERTID%
