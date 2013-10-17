@@ -15,12 +15,12 @@ class SessionSpec extends ObjectBehavior
     const API_VERSION = 827;
     /**
      * @param D4m\NgnFeed\Ebay\Security\Auth\Credentials $credentials
+     * @param Symfony\Component\EventDispatcher\EventDispatcher $dispatcher
      * @param D4m\NgnFeed\Ebay\Serializer\SerializerDecorator $serializer
      */
-    function let($credentials, $serializer)
+    function let($credentials, $dispatcher, $serializer)
     {
-        $serializer->beADoubleOf('D4m\NgnFeed\Ebay\Serializer\SerializerDecorator');
-        $this->beConstructedWith($credentials, $serializer);
+        $this->beConstructedWith($credentials, $dispatcher, $serializer);
     }
 
     function it_is_initializable()
@@ -44,9 +44,7 @@ class SessionSpec extends ObjectBehavior
         $apiCallName = ['X-EBAY-API-CALL-NAME' => "TestCall"];
         $parameters = ['headers' => $apiCallName, 'request' => [] ];
         $authType = 'api';
-
-        $transport->send(Argument::any(), Argument::any(), Argument::any())
-            ->shouldBeCalled()
+        $transport->send(Argument::cetera())
             ->willReturn($response);
         $this->setTransport($transport);
         $response = $this->sendRequest($apiCallName, $parameters, $authType);
