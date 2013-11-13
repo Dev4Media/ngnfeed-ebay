@@ -245,7 +245,7 @@ class Session
     {
         if(!is_null($this->dispatcher)) {
             $data['headers'] = $headers;
-            $data['payload'] = $payload;
+            $data['body'] = $payload;
             $event = new RequestEvent($data);
             $this->dispatcher->dispatch(EbayEvents::REQUEST_SEND, $event);
         }
