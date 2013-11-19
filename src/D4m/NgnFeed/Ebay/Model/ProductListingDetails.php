@@ -333,6 +333,4 @@ class ProductListingDetails extends Entity
     {
         return $this->useStockPhotoURLAsGallery;
     }
-
-
 } 

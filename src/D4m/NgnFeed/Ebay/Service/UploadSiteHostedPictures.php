@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Service;
 
-
 use D4m\NgnFeed\Ebay\Model\Request\UploadSiteHostedPicturesRequest;
 
 class UploadSiteHostedPictures extends BaseApiCall
@@ -18,6 +17,5 @@ class UploadSiteHostedPictures extends BaseApiCall
     {
         $this->initializeParameters('UploadSiteHostedPictures');
         $this->options = $options;
-
     }
 }

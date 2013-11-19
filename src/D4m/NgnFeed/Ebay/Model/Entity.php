@@ -33,14 +33,11 @@ abstract class Entity implements EntityInterface
      */
     private function add($field, $args)
     {
-
-        if($this->hasField($field) && null !== $args[0]) {
+        if ($this->hasField($field) && null !== $args[0]) {
             $this->virtualFieldsCollection[$field][] = $args[0];
-        }
-        else if ( null === $args[0]){
+        } else if ( null === $args[0]){
             throw new \InvalidArgumentException("The argument given is null ");
-        }
-        else {
+        } else {
             throw new \BadMethodCallException("There is no method add".ucfirst($field)."() on ".get_class($this));
         }
     }
@@ -48,6 +45,7 @@ abstract class Entity implements EntityInterface
     protected function hasField($field)
     {
         $fields = $this->getFields();
+
         return in_array($field, $fields) || $field == 'virtualFieldsCollection';
     }
 
@@ -65,6 +63,4 @@ abstract class Entity implements EntityInterface
     {
         return $this->virtualFieldsCollection;
     }
-
-
 }

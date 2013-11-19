@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class ListingDurationCode
 {
     const DAYS_1 = "Days_1";
@@ -17,5 +16,4 @@ class ListingDurationCode
     const DAYS_90 = "Days_30";
     const DAYS_120 = "Days_30";
     const GTC = "GTC";
-
 }

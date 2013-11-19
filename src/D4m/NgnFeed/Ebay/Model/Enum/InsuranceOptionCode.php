@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class InsuranceOptionCode
 {
     const OPTIONAL = "Optional";

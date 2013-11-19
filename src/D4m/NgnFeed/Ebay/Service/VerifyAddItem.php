@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Service;
 
-
 class VerifyAddItem extends BaseApiCall
 {
     protected $options;

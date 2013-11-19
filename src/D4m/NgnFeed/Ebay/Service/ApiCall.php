@@ -7,10 +7,8 @@
 
 namespace D4m\NgnFeed\Ebay\Service;
 
-
-interface ApiCall {
-
+interface ApiCall
+{
     public function setSession($session);
     public function execute();
-
 }

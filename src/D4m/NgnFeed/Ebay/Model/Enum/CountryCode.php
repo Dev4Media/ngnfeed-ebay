@@ -7,5 +7,4 @@ class CountryCode
     const CA = "CA";
     const GB = "GB";
     const US = "US";
-
 }

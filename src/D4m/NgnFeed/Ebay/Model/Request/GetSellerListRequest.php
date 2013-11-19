@@ -243,7 +243,4 @@ class GetSellerListRequest extends BaseRequest
     {
         return $this->userID;
     }
-
-
-
 }

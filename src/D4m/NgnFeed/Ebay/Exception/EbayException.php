@@ -7,5 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Exception;
 
-
-interface EbayException {}
+interface EbayException
+{
+}

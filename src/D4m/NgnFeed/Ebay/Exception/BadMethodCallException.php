@@ -7,5 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Exception;
 
-
-class BadMethodCallException extends \BadMethodCallException implements EbayException {}
+class BadMethodCallException extends \BadMethodCallException implements EbayException
+{
+}

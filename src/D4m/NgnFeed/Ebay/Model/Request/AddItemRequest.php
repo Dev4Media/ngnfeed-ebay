@@ -26,7 +26,4 @@ class AddItemRequest extends BaseRequest
     {
         return $this->item;
     }
-
-
-
 }

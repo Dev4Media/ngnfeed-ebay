@@ -11,5 +11,4 @@ class EndReasonCode
     const CUSTOM_CODE = "CustomCode";
     const SELL_TO_HIGH_BIDDER = "SellToHighBidder";
     const SOLD = "Sold";
-
 }

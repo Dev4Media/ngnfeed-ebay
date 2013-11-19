@@ -9,7 +9,6 @@ namespace D4m\NgnFeed\Ebay\Model;
 
 class ReturnPolicy extends Entity
 {
-
     protected $refundOption;
     protected $refund;
     protected $returnsWithinOption;

@@ -55,6 +55,4 @@ class VerifyAddItemRequest extends BaseRequest
     {
         return $this->item;
     }
-
-
 }

@@ -11,7 +11,6 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Serializer;
 use D4m\NgnFeed\Ebay\Serializer\Normalizer\GetSetMethodNormalizer;
 
-
 class SerializerFactory
 {
     public function getSerializer($rootName)
@@ -27,5 +26,4 @@ class SerializerFactory
 
         return $serializer;
     }
-
 }

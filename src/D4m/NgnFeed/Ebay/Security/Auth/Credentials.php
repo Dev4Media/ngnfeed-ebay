@@ -2,8 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Security\Auth;
 
-use Prophecy\Exception\InvalidArgumentException;
-
 class Credentials implements CredentialsInterface
 {
     private $name;
@@ -22,13 +20,11 @@ class Credentials implements CredentialsInterface
 
     public function getKey($key)
     {
-        if(in_array($key, [ 'name', 'devId', 'appId', 'certId' ])) {
+        if (in_array($key, [ 'name', 'devId', 'appId', 'certId' ])) {
 
            return $this->{$key};
-        }
-        else {
-
-            throw new InvalidArgumentException("Invalid Credential");
+        } else {
+            throw new \InvalidArgumentException("Invalid Credential");
         }
     }
 
@@ -79,7 +75,7 @@ class Credentials implements CredentialsInterface
         return (is_string($this->name) &&
             ctype_alnum(str_replace($dash, '', $this->devId)) &&
             ctype_alnum(str_replace($dash, '', $this->appId)) &&
-            ctype_alnum(str_replace($dash, '', $this->certId)) );
+            ctype_alnum(str_replace($dash, '', $this->certId)) )
+        ;
     }
-
 }

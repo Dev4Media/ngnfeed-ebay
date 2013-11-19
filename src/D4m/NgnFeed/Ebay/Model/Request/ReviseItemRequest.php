@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Request;
 
-
 class ReviseItemRequest extends BaseRequest
 {
     protected $item;

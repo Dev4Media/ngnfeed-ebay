@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Request;
 
-
 class RelistItemRequest extends BaseRequest
 {
     protected $item;

@@ -28,7 +28,4 @@ class RequesterCredentials extends Entity
     {
         return $this->eBayAuthToken;
     }
-
-
-
 }

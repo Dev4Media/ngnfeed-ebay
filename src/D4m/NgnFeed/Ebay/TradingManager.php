@@ -10,6 +10,7 @@ class TradingManager implements Ebay
     const API_VERSION = 831;
     const SITE_ID_US = 0;
     const API_DETAIL_LEVEL = 0;
+
     private $session;
     private $serviceFactory;
     private $serializerFactory;
@@ -93,7 +94,8 @@ class TradingManager implements Ebay
         return $this->serviceFactory->getService($serviceName, $arguments)
             ->setSession($this->session)
             ->setRequestFactory($this->requestFactory)
-            ->execute();
+            ->execute()
+        ;
     }
 
     private function configureSession($serializer)

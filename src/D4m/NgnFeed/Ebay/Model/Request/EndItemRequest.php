@@ -55,7 +55,4 @@ class EndItemRequest extends BaseRequest
     {
         return $this->sellerInventoryID;
     }
-
-
-
 }

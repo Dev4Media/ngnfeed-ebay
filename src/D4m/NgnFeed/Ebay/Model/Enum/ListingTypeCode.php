@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class ListingTypeCode
 {
     const UNKNOWN = "Unknown";
@@ -24,5 +23,4 @@ class ListingTypeCode
     const EXPRESS = "Express";
     const SHOPPING = "Shopping";
     const CUSTOM_CODE = "CustomCode";
-
 }

@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class BestOfferDetails extends Entity
 {
     protected $bestOfferCount;

@@ -37,5 +37,4 @@ class BuyerPaymentMethodCode
     const PAY_ON_PICKUP = "PayOnPickup";
     const DINERS = "Diners";
     const STANDARD_PAYMENT = "StandardPayment";
-
 }

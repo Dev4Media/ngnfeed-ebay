@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class GalleryTypeCode
 {
     const NONE = "None";
@@ -10,5 +9,4 @@ class GalleryTypeCode
     const GALLERY = "Gallery";
     const PLUS = "Plus";
     const CUSTOM_CODE = "CustomCode";
-
 }

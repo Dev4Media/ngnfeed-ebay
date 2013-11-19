@@ -7,9 +7,7 @@
 
 namespace D4m\NgnFeed\Ebay\Security\Auth;
 
-
-interface CredentialsInterface {
-
+interface CredentialsInterface
+{
     public function isCompliant();
-
 }
