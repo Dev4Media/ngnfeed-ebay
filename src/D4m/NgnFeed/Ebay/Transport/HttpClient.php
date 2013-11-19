@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Transport;
 
-
 use Guzzle\Http\Client;
 
 class HttpClient
@@ -16,13 +15,11 @@ class HttpClient
 
     public function __construct(Client $client = null)
     {
-        if(is_null($client)) {
+        if (is_null($client)) {
            $this->client = new Client();
-        }
-        else {
+        } else {
             $this->client = $client;
         }
-
     }
 
     /**
@@ -44,7 +41,7 @@ class HttpClient
     public function send($url, $headers, $postBody)
     {
         $request = $this->client->post($url, $headers, $postBody );
+
         return $request->send();
     }
-
 }

@@ -13,5 +13,4 @@ class ShippingTypeCode
     const CALCULATED_DOMESTIC_FLAT_INTERNATIONAL = "CalculatedDomesticFlatInternational";
     const FREIGHT_FLAT = "FreightFlat";
     const CUSTOM_CODE = "CustomCode";
-
 }

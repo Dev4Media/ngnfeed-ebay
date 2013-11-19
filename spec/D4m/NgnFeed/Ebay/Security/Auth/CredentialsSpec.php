@@ -8,7 +8,6 @@
 namespace spec\D4m\NgnFeed\Ebay\Security\Auth;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Exception\InvalidArgumentException;
 
 class CredentialsSpec extends ObjectBehavior
 {
@@ -33,7 +32,7 @@ class CredentialsSpec extends ObjectBehavior
 
     function it_should_throw_error_when_credentials_key_do_not_exist()
     {
-        $this->shouldThrow(new InvalidArgumentException('Invalid Credential'))
+        $this->shouldThrow(new \InvalidArgumentException('Invalid Credential'))
             ->duringGetKey('invalid_key');
     }
 

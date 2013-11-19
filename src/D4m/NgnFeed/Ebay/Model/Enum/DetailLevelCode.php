@@ -11,5 +11,4 @@ class DetailLevelCode
     const RETURN_SUMMARY = "ReturnSummary";
     const RETURN_HEADERS = "ReturnHeaders";
     const RETURN_MESSAGES = "ReturnMessages";
-
 }

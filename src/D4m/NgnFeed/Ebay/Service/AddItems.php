@@ -22,20 +22,21 @@ class AddItems extends BaseApiCall
     {
         $addItemsRequest = $this->getRequest();
         $counter = 1;
-        foreach($this->addItemRequestContainers as $addItemRequestContainer) {
-            if($counter <= self::MAX_ITEMS) {
+
+        foreach ($this->addItemRequestContainers as $addItemRequestContainer) {
+
+            if ($counter <= self::MAX_ITEMS) {
                 $addItemsRequest->addAddItemRequestContainer($addItemRequestContainer);
-            }
-            else {
+            } else {
                 break;
             }
+
             $counter ++;
         }
-        $this->parameters['request'] = $addItemsRequest;
 
+        $this->parameters['request'] = $addItemsRequest;
         $response = $this->session->sendRequest($this->apiCallName, $this->parameters);
 
         return $response;
-
     }
 }

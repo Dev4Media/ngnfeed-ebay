@@ -15,6 +15,5 @@ class AddItem extends BaseApiCall
     {
         $this->initializeParameters('AddItem');
         $this->options = $options;
-
     }
 }

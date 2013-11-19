@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Serializer;
 
-
 class SerializerDecorator
 {
     private $serializer;
@@ -28,5 +27,4 @@ class SerializerDecorator
     {
         return preg_replace("/___(\d+)>/i", ">", $data);
     }
-
 }

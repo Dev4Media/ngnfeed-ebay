@@ -10,6 +10,7 @@ namespace D4m\NgnFeed\Ebay\Security;
 use D4m\NgnFeed\Ebay\EbayEvents;
 use D4m\NgnFeed\Ebay\Event\RequestEvent;
 use D4m\NgnFeed\Ebay\Event\ResponseEvent;
+use D4m\NgnFeed\Ebay\Security\Auth\CredentialsInterface;
 use D4m\NgnFeed\Ebay\Transport\HttpClient;
 
 class Session
@@ -48,14 +49,13 @@ class Session
     {
         if($mode == "live") {
             $this->url = self::URL_PRODUCTION;
-        }
-        else {
+        } else {
             $this->url = self::URL_SANDBOX;
         }
     }
 
     /**
-     * @return bool
+     * @return Boolean
      */
     public function haveCredentials()
     {
@@ -205,15 +205,15 @@ class Session
 
     protected function buildRequestBody($apiCallName, $parameters, $authType)
     {
-        if($authType == self::AUTH_TOKEN ) {
+        if ($authType == self::AUTH_TOKEN ) {
             $parameters['request']->addRequesterCredentials($this->getToken());
         }
+
         $serializedRequest = $this->serializer->serialize($parameters['request'], $this->format);
         $requestBody = $this->addXmlns($serializedRequest, $apiCallName['X-EBAY-API-CALL-NAME']);
         $requestBody = $this->addEncoding($requestBody, 'utf-8');
 
         return  $requestBody;
-
     }
 
     protected function addXmlns($serializedRequest, $apiCallName)
@@ -221,15 +221,15 @@ class Session
         $rootTag = $apiCallName.'Request';
 
         return str_replace("<".$rootTag.">", "<".$rootTag.' xmlns="'.self::EBL_BASE_COMPONENTS.'">',
-            $serializedRequest);
-
+            $serializedRequest)
+        ;
     }
 
     protected function addEncoding($requestBody, $encoding)
     {
         $encodedText = '<?xml version="1.0" encoding="'.$encoding.'" ?>';
-        return str_replace('<?xml version="1.0"?>', $encodedText, $requestBody );
 
+        return str_replace('<?xml version="1.0"?>', $encodedText, $requestBody );
     }
 
     protected function send($headers, $payload)
@@ -243,7 +243,7 @@ class Session
 
     protected function dispatchRequest($headers, $payload)
     {
-        if(!is_null($this->dispatcher)) {
+        if (!is_null($this->dispatcher)) {
             $data['headers'] = $headers;
             $data['body'] = $payload;
             $event = new RequestEvent($data);
@@ -253,10 +253,9 @@ class Session
 
     protected function dispatchResponse($response)
     {
-        if(!is_null($this->dispatcher)) {
+        if (!is_null($this->dispatcher)) {
             $event = new ResponseEvent($response);
             $this->dispatcher->dispatch(EbayEvents::RESPONSE_RECEIVE, $event);
         }
     }
-
 }

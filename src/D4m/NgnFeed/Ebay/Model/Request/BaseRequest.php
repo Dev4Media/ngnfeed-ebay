@@ -92,5 +92,4 @@ class BaseRequest extends Entity
         $requesterCredentials->setEBayAuthToken($token);
         $this->requesterCredentials = $requesterCredentials;
     }
-
 }

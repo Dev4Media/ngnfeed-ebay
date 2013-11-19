@@ -6,5 +6,4 @@ class CurrencyCode
 {
     const USD = "USD";
     const GBP = "GBP";
-
 }

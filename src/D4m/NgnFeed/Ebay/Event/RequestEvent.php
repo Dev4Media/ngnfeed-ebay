@@ -29,5 +29,4 @@ class RequestEvent extends Event
     {
         return $this->body;
     }
-
 }

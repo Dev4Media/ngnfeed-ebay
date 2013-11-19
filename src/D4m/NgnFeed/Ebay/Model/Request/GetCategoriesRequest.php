@@ -72,6 +72,4 @@ class GetCategoriesRequest extends BaseRequest
     {
         return $this->viewAllNodes;
     }
-
-
 }

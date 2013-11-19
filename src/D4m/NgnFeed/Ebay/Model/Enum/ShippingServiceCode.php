@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class ShippingServiceCode
 {
     const OTHER = "Other";

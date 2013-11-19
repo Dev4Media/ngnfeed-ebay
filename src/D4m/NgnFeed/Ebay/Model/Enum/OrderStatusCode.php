@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Enum;
 
-
 class OrderStatusCode
 {
     const ACTIVE = "Active ";

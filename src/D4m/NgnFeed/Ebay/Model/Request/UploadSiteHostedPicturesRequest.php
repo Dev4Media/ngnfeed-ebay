@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Request;
 
-
 class UploadSiteHostedPicturesRequest extends BaseRequest
 {
     protected $pictureName;
@@ -141,7 +140,4 @@ class UploadSiteHostedPicturesRequest extends BaseRequest
     {
         return $this->pictureWatermark;
     }
-
-
-
 }

@@ -2,7 +2,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class SellerProfiles extends Entity
 {
     protected $sellerShippingProfile;

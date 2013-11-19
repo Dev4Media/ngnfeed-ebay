@@ -22,7 +22,4 @@ class GetItemRequest extends BaseRequest
     {
         return $this->itemID;
     }
-
-
-
 }

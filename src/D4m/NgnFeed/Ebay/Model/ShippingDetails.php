@@ -7,10 +7,8 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class ShippingDetails extends Entity
 {
-
     protected $allowPaymentEdit;
     protected $applyShippingDiscount;
     protected $globalShipping;

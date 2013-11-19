@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class Measure extends Entity
 {
     protected $value;

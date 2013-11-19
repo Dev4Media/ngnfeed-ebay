@@ -7,10 +7,8 @@
 
 namespace D4m\NgnFeed\Ebay\Model\Request;
 
-
 class RequestFactory
 {
-
     public function getRequest($apiCallName)
     {
         $requestName = $apiCallName.'Request';
@@ -39,5 +37,4 @@ class RequestFactory
     {
         return __NAMESPACE__;
     }
-
 }

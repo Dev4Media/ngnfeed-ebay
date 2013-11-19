@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class RateTableDetails extends Entity
 {
     protected $domesticRateTable;

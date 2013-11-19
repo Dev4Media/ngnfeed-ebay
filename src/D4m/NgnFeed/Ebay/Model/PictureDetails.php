@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Model;
 
-
 class PictureDetails extends Entity
 {
     protected $galleryType;

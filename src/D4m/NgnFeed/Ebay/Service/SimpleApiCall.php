@@ -7,7 +7,6 @@
 
 namespace D4m\NgnFeed\Ebay\Service;
 
-
 class SimpleApiCall extends BaseApiCall
 {
     protected $options;
@@ -17,5 +16,4 @@ class SimpleApiCall extends BaseApiCall
         $this->initializeParameters($serviceName);
         $this->options = $options;
     }
-
 }

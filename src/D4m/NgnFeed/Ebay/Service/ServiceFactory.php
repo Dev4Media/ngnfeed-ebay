@@ -9,21 +9,19 @@ class ServiceFactory
 
     public function getService($serviceName, $arguments = [])
     {
-        if($this->serviceExists($serviceName)) {
+        if ($this->serviceExists($serviceName)) {
             $service = $this->getClass($serviceName);
             return new $service($arguments);
-        }
-        else if($this->isServiceAllowed($serviceName)) {
+        } else if($this->isServiceAllowed($serviceName)) {
             return new SimpleApiCall($serviceName, $arguments);
-        }
-        else {
+        } else {
             throw new \InvalidArgumentException("No Service Found");
         }
-
     }
 
     /**
      * @param  $manager
+     * @return ServiceFactory
      */
     public function setManager($manager)
     {
@@ -45,6 +43,7 @@ class ServiceFactory
     private function serviceExists($serviceName)
     {
         $class = $this->getClass($serviceName);
+
         return class_exists($class);
     }
 
@@ -53,9 +52,9 @@ class ServiceFactory
         return in_array($serviceName, $this->getServiceList());
     }
 
-    private function getClass($classeName)
+    private function getClass($className)
     {
-        return $this->getNamespace()."\\".$classeName;
+        return $this->getNamespace()."\\".$className;
     }
 
     private function getNamespace()
@@ -186,5 +185,4 @@ class ServiceFactory
             "VeROReportItemsCall"
         ];
     }
-
 }
