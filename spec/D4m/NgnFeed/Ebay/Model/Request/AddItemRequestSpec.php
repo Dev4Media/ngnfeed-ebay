@@ -7,12 +7,10 @@
 
 namespace spec\D4m\NgnFeed\Ebay\Model\Request;
 
-
 use PhpSpec\ObjectBehavior;
 
 class AddItemRequestSpec extends ObjectBehavior
 {
-
     function it_is_initializable()
     {
         $this->shouldHaveType('D4m\NgnFeed\Ebay\Model\Request\AddItemRequest');
@@ -28,5 +26,4 @@ class AddItemRequestSpec extends ObjectBehavior
 
         $this->getItem()->shouldHaveType('D4m\NgnFeed\Ebay\Model\Item');
     }
-
 }

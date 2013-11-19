@@ -11,7 +11,6 @@ use PhpSpec\ObjectBehavior;
 
 class CredentialsSpec extends ObjectBehavior
 {
-
     function it_should_initialize()
     {
         $this->shouldHaveType('D4m\NgnFeed\Ebay\Security\Auth\Credentials');
@@ -35,6 +34,4 @@ class CredentialsSpec extends ObjectBehavior
         $this->shouldThrow(new \InvalidArgumentException('Invalid Credential'))
             ->duringGetKey('invalid_key');
     }
-
-
 }

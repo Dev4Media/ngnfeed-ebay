@@ -33,6 +33,5 @@ class GetSetMethodNormalizerSpec extends ObjectBehavior
 
         $this->normalize($item, 'xml')
             ->shouldReturn(['Prophecy' => ['Title' => 'Test Item', 'StartPrice' => 375.00 ] ]);
-
     }
 }
