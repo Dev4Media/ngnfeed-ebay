@@ -40,7 +40,6 @@ class SessionSpec extends ObjectBehavior
      */
     function it_should_return_response_when_sending_a_request($transport, $response)
     {
-
         $apiCallName = ['X-EBAY-API-CALL-NAME' => "TestCall"];
         $parameters = ['headers' => $apiCallName, 'request' => [] ];
         $authType = 'api';
@@ -50,9 +49,5 @@ class SessionSpec extends ObjectBehavior
         $response = $this->sendRequest($apiCallName, $parameters, $authType);
 
         $response->shouldHaveType('Guzzle\Http\Message\Response');
-
     }
-
-
-
 }

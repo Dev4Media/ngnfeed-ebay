@@ -54,5 +54,4 @@ class AddItemsSpec extends ObjectBehavior
 
         $this->execute()->shouldReturn('<xml>Response</xml>');
     }
-
 }

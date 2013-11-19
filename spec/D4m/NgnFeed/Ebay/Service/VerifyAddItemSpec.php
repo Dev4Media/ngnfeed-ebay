@@ -55,6 +55,4 @@ class VerifyAddItemSpec extends ObjectBehavior
 
         $this->execute()->shouldReturn('<xml>Response</xml>');
     }
-
-
 }

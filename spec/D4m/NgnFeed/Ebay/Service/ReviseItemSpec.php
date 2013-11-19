@@ -55,5 +55,4 @@ class ReviseItemSpec extends ObjectBehavior
 
         $this->execute()->shouldReturn('<xml>Response</xml>');
     }
-
 }

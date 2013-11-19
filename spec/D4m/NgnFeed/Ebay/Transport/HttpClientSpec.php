@@ -40,7 +40,5 @@ class HttpClientSpec extends ObjectBehavior
         $client->post($fakeUrl, $headers, $body)->shouldBeCalled()->willReturn($request);
 
         $this->send($fakeUrl, $headers, $body)->shouldHaveType('Guzzle\Http\Message\Response');
-
     }
-
 }

@@ -9,7 +9,6 @@ require_once(__DIR__ . '/../../vendor/autoload.php');
 use D4m\NgnFeed\Ebay\TradingManager;
 use D4m\NgnFeed\Ebay\Security\Session;
 use D4m\NgnFeed\Ebay\Security\Auth\Credentials;
-use D4m\NgnFeed\Ebay\Serializer\SerializerDecorator;
 
 use D4m\NgnFeed\Ebay\Model\Enum\ListingDurationCode;
 use D4m\NgnFeed\Ebay\Model\Enum\CurrencyCode;
@@ -19,7 +18,6 @@ use D4m\NgnFeed\Ebay\Model\Enum\BuyerPaymentMethodCode;
 use D4m\NgnFeed\Ebay\Model\Enum\ListingTypeCode;
 use D4m\NgnFeed\Ebay\Model\Enum\GalleryTypeCode;
 use D4m\NgnFeed\Ebay\Model\Enum\ReturnsAcceptedOptionsCode;
-use D4m\NgnFeed\Ebay\Model\Enum\ItemConditionCode;
 use D4m\NgnFeed\Ebay\Model\Enum\ShippingTypeCode;
 use D4m\NgnFeed\Ebay\Model\Enum\ShippingServiceCode;
 

@@ -7,7 +7,6 @@
 
 namespace spec\D4m\NgnFeed\Ebay\Model;
 
-
 use PhpSpec\ObjectBehavior;
 
 class ItemSpec extends ObjectBehavior
@@ -32,5 +31,4 @@ class ItemSpec extends ObjectBehavior
         $this->setPrimaryCategory($primaryCategory);
         $this->getPrimaryCategory()->shouldHaveType($primaryCategory);
     }
-
 }
