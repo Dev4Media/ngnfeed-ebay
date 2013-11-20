@@ -21,10 +21,10 @@ class ProductListingDetails extends Entity
     protected $productDetailsURL;
     protected $returnSearchResultOnDuplicates;
     protected $listIfNoProduct;
-    protected $gtin;
-    protected $isbn;
-    protected $upc;
-    protected $ean;
+    protected $GTIN;
+    protected $ISBN;
+    protected $UPC;
+    protected $EAN;
     protected $brandMPN;
     protected $ticketListingDetails;
     protected $useFirstProduct;
@@ -97,33 +97,33 @@ class ProductListingDetails extends Entity
     /**
      * @param mixed $ean
      */
-    public function setEan($ean)
+    public function setEAN($ean)
     {
-        $this->ean = $ean;
+        $this->EAN = $ean;
     }
 
     /**
      * @return mixed
      */
-    public function getEan()
+    public function getEAN()
     {
-        return $this->ean;
+        return $this->EAN;
     }
 
     /**
      * @param mixed $gtin
      */
-    public function setGtin($gtin)
+    public function setGTIN($gtin)
     {
-        $this->gtin = $gtin;
+        $this->GTIN = $gtin;
     }
 
     /**
      * @return mixed
      */
-    public function getGtin()
+    public function getGTIN()
     {
-        return $this->gtin;
+        return $this->GTIN;
     }
 
     /**
@@ -161,17 +161,17 @@ class ProductListingDetails extends Entity
     /**
      * @param mixed $isbn
      */
-    public function setIsbn($isbn)
+    public function setISBN($isbn)
     {
-        $this->isbn = $isbn;
+        $this->ISBN = $isbn;
     }
 
     /**
      * @return mixed
      */
-    public function getIsbn()
+    public function getISBN()
     {
-        return $this->isbn;
+        return $this->ISBN;
     }
 
     /**
@@ -289,17 +289,17 @@ class ProductListingDetails extends Entity
     /**
      * @param mixed $upc
      */
-    public function setUpc($upc)
+    public function setUPC($upc)
     {
-        $this->upc = $upc;
+        $this->UPC = $upc;
     }
 
     /**
      * @return mixed
      */
-    public function getUpc()
+    public function getUPC()
     {
-        return $this->upc;
+        return $this->UPC;
     }
 
     /**

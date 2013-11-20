@@ -31,7 +31,7 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
     {
         foreach ($callbacks as $attribute => $callback) {
             if (!is_callable($callback)) {
-                throw new InvalidArgumentException(sprintf('The given callback for attribute "%s" is not callable.', $attribute));
+                throw new \InvalidArgumentException(sprintf('The given callback for attribute "%s" is not callable.', $attribute));
             }
         }
         $this->callbacks = $callbacks;
