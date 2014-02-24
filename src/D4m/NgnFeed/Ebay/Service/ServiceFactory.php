@@ -127,6 +127,7 @@ class ServiceFactory
             "GetPromotionRulesGetSellerDashboard",
             "GetSellerEvents",
             "GetSellerList",
+            "GetSellingManagerSoldListings",
             "GetSellerPaymentsCall",
             "GetSellerTransactions",
             "GetSessionID",
