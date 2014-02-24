@@ -1,13 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: raul
- * Date: 2/24/14
- * Time: 3:56 PM
+ * @author: Raul Rodriguez - raulrodriguez782@gmail.com
+ * @created: 2/24/14 - 11:08 AM
  */
 
 namespace D4m\NgnFeed\Ebay\Model\Request;
-
 
 class GetOrdersRequest extends BaseRequest
 {
